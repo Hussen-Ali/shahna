@@ -1,0 +1,21 @@
+<!doctype html>
+{% load static %}
+
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Shahna — EV SuperCharge (Coming Soon)</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<!-- GSAP for smooth animations -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="" crossorigin="anonymous"></script>
+</head>
+<body>
+  {% block content %}{% endblock %}
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

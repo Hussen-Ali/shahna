@@ -1,0 +1,68 @@
+{% extends "landing/base.html" %}
+{% load static %}
+
+{% block content %}
+<main class="hero">
+  <div class="hero-left">
+    <div class="logo-wrap">
+
+
+      <!-- fallback svg inline -->
+      <img src="{% static 'images/logo.svg' %}" alt="Shahna logo" class="logo-img">
+    </div>
+
+    <h1 class="title">Shahna — EV SuperCharge</h1>
+    <p class="tagline">Powering faster charging for the electric future. Commercial rollout coming soon.</p>
+
+    <div class="countdown" data-launch="{{ launch_iso }}">
+      <div class="time">
+        <span class="num" id="days">—</span><span class="label">Days</span>
+      </div>
+      <div class="time">
+        <span class="num" id="hours">—</span><span class="label">Hours</span>
+      </div>
+      <div class="time">
+        <span class="num" id="mins">—</span><span class="label">Mins</span>
+      </div>
+      <div class="time">
+        <span class="num" id="secs">—</span><span class="label">Secs</span>
+      </div>
+    </div>
+
+    <form class="subscribe" onsubmit="event.preventDefault(); subscribe();">
+      <input id="email" placeholder="Your work email — team@company.com" type="email" required />
+      <button type="submit">Notify me</button>
+    </form>
+
+    <p class="micro">Enterprise & fleet partnerships · Deployment & site planning · OCPP-ready</p>
+  </div>
+
+  <div class="hero-right">
+    <div class="charger-card">
+      <!-- animated SVG charger vector -->
+      <svg class="charger" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="g1" x1="0" x2="1">
+            <stop offset="0" stop-color="#00d2ff"/>
+            <stop offset="1" stop-color="#3a7bd5"/>
+          </linearGradient>
+        </defs>
+        <rect x="40" y="30" width="90" height="140" rx="10" fill="url(#g1)" opacity="0.95"/>
+        <rect x="55" y="45" width="60" height="90" rx="6" fill="#0f1724" opacity="0.9"/>
+        <path class="bolt" d="M100 65 L88 95 L104 95 L92 125" stroke="#ffd166" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+        <circle cx="145" cy="150" r="22" fill="#0f1724" opacity="0.9"/>
+        <path class="plug" d="M140 140 L153 128" stroke="#fff" stroke-width="5" stroke-linecap="round" />
+      </svg>
+    </div>
+    <div class="subtle-info">Scalable sites • Smart metering • 24/7 ops</div>
+  </div>
+
+  <!-- animated background -->
+  <div class="bg-glow"></div>
+  <canvas id="particles"></canvas>
+</main>
+
+<footer class="site-footer">
+  <small>© {{ now.year }} Shahna. For inquiries: <a href="mailto:hello@shahna.example">hello@shahna.example</a></small>
+</footer>
+{% endblock %}
