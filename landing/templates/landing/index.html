@@ -29,10 +29,13 @@
       </div>
     </div>
 
-    <form class="subscribe" onsubmit="event.preventDefault(); subscribe();">
-      <input id="email" placeholder="دخل ايميلك هنا يكس وجهك" type="email" required />
-      <button type="submit">Notify me</button>
-    </form>
+<form class="subscribe" id="subscribeForm">
+  <input id="email" placeholder="دخل ايميلك هنا يكس وجهك" type="email" required />
+  <button type="submit">Notify me</button>
+</form>
+<p id="thankyou" class="micro" style="display:none; color:#0f0; margin-top:10px;">
+  ✅ Thank you! You’re on the list.
+</p>
 
     <p class="micro">Enterprise & fleet partnerships · Deployment & site planning · OCPP-ready</p>
   </div>
